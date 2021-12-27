@@ -1,0 +1,29 @@
+<?php
+
+if (isset($_POST["sub"])) {
+    validation();
+} else {
+    header('Location:midterm.html');
+}
+
+function validation()
+{
+    $password = $_POST["password"];
+    $email = $_POST["email"];
+    $gender = $_POST["radio"];
+    $color = $_POST["color"];
+    if (strlen($password) >= 8 && strlen($password) <= 16) {
+        echo "registered successfully!" . "<br>";
+        echo $email . "<br>";
+        echo $gender . "<br>";
+        if (!$color == null) {
+            foreach ($color as $c) {
+                echo $c . "<br>";
+            }
+        } else {
+            echo "No Favorite color";
+        }
+    } else {
+        echo "password should be between 8 to 16";
+    }
+}
