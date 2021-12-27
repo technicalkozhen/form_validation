@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: gray;
+        }
+        form{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            background-color:rgb(233, 122, 103);
+            width: 30%;
+            height: 30%;
+            border-radius: 5px;
+            text-align: center;
+        }
+        input{
+            margin: 5px;
+        }
+        button{
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="midterm.php" method="post">
+        <label>Email:<input type="email" name="email" class="inpu" required></label> <br>
+        <label>Password:<input type="password" name="password" class="inpu" required></label> <br>
+        gender:<input type="radio" name="radio" value="male" required>male
+        <input type="radio" name="radio" value="female" required>female <br>
+        color:<input type="checkbox" name="color[]" value="pink">pink
+        <input type="checkbox" name="color[]" value="violet">violet
+        <input type="checkbox" name="color[]" value="magenta">magenta <br>
+        <button type="submit" name="sub">register</button>
+
+    </form>
+</body>
+</html>
